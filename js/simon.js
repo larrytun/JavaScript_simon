@@ -9,6 +9,7 @@ function Game(name) {
 Game.prototype.addColor = function() {
   randomNumber = Math.floor((Math.random() * 3) + 1);
   numbersArray.push(randomNumber);
+  return numbersArray;
 }
 
 Game.prototype.addUserColor = function(number) {
@@ -24,3 +25,5 @@ Game.prototype.compareArrays = function() {
     return false;
   }
 }
+
+exports.gameModule = Game;
